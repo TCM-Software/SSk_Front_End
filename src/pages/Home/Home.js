@@ -10,6 +10,7 @@ import Testimonials from "../../components/Testimonial/Testimonials";
 import Footer from "../../components/Footer/Footer";
 import Services from "../../components/Courses-section/Courses";
 import Cards from "../../components/Card/Cards";
+import "./Home.css";
 
 function Home() {
   return (
@@ -18,9 +19,8 @@ function Home() {
       <ChooseUs />
       <Cards />
       <Services />
-      
       <Features />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Footer />
     </>
   );

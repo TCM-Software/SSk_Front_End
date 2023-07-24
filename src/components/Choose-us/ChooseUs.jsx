@@ -1,10 +1,9 @@
-import React, { useState , useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Col, Row } from "antd";
 
 import chooseImg from "../../assests/images/Filter/filter4.png";
 import "./choose-us.css";
 import ScrollReveal from "scrollreveal";
-
 
 import ReactPlayer from "react-player";
 const ChooseUs = () => {
@@ -13,8 +12,8 @@ const ChooseUs = () => {
     const sr = ScrollReveal();
 
     sr.reveal(".revealElement", {
-      duration: 3000,
-      distance: "100px",
+      duration: 2000,
+      distance: "50px",
       easing: "ease",
       origin: "bottom",
     });
@@ -22,22 +21,18 @@ const ChooseUs = () => {
 
   return (
     <>
-      <Row
-        className="whowe revealElement"
-        
-        gutter={0}
-      >
-        <Col className="Choose_h1" xs={{ span: 22 }} lg={{ span: 24 }}>
+      <Row className="whowe revealElement">
+        <Col className="Choose_h1" xs={{ span: 24 }} sm={{span: 24}} lg={{ span: 24 }}>
           <h1>
-              <span className="black-text2">Who</span> We Are ?
-            </h1>
+            <span className="black-text2">Who</span> We Are ?
+          </h1>
         </Col>
 
         <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
         <Col
           className="describe"
           xs={{ span: 20 }}
-          sm={{ span: 16 }}
+          sm={{ span: 10 }}
           lg={{ span: 10 }}
         >
           <p>
@@ -51,11 +46,12 @@ const ChooseUs = () => {
             water filtration solutions available in the market.
           </p>
         </Col>
+        <Col xs={{ span: 2 }} sm={{ span: 0 }} lg={{ span: 0 }}></Col>
 
         <Col
           className="choose_img_Header"
           xs={{ span: 22 }}
-          sm={{ span: 16 }}
+          sm={{ span: 10 }}
           lg={{ span: 10 }}
         >
           <div className="choose__img">
@@ -73,14 +69,14 @@ const ChooseUs = () => {
             {!showVideo && (
               <span className="play__icon">
                 <i
-                  className="ri-play-circle-line"
+                  className="ri-play-circle-line "
                   onClick={() => setShowVideo(!showVideo)}
                 ></i>
               </span>
             )}
           </div>
         </Col>
-        <Col xs={{ span: 2 }} sm={{ span: 0 }} lg={{ span: 2 }}></Col>
+        <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
       </Row>
     </>
   );

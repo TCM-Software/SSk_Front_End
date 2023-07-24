@@ -44,8 +44,8 @@ function Services() {
     const sr = ScrollReveal();
 
     sr.reveal(".revealElement", {
-      duration: 3000,
-      distance: "100px",
+      duration: 2000,
+      distance: "50px",
       easing: "ease",
       origin: "bottom",
     });
@@ -60,7 +60,7 @@ function Services() {
           
         </Col>
       </Row>
-      <Row className="cards_col_3 revealElement"  gutter={0} justify="center">
+      <Row className="cards_col_3 revealElement" justify="center">
         <Col lg={{ span: 2 }} xs={{ span: 20 }}></Col>
         {coursesData.map((item) => (
           <Col

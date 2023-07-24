@@ -1,19 +1,19 @@
 import React, { useRef, useState , useEffect } from "react";
 import "./Contact.css";
 import Footer from "../../components/Footer/Footer";
-import service1 from "../../assests/images/Service/phone.jpg";
-import service2 from "../../assests/images/Service/service2.jpg";
+import getintouch from "../../assests/images/contact/getintouch.jpg";
+import service2 from "../../assests/images/contact/customer.jpg";
 import {
   PhoneOutlined,
   WhatsAppOutlined,
   MailOutlined,
 } from "@ant-design/icons";
-import banner from "../../assests/images/contactus-banner.jpg";
+import banner from "../../assests/images/contact/contact.jpg";
 import emailjs from "emailjs-com";
 import ScrollReveal from "scrollreveal";
 
 import { Card, Col, Row } from "antd";
-const { Meta } = Card;
+
 
 const Contact = () => {
 
@@ -103,11 +103,11 @@ const Contact = () => {
   return (
     <>
       <Row>
-        <Col className="" xs={{ span: 24 }} lg={{ span: 24 }}>
-          <div className="banner-container revealElement">
-            <h1>Contact Us</h1>
+        <Col xs={{ span: 24 }}  sm={{ span: 24 }} lg={{ span: 24 }}>
+          <div className="banner-container">
+            {/* <h1>Contact Us</h1> */}
 
-            <img src={banner} alt="" />
+            <img src={banner} alt="contactBanner" />
           </div>
         </Col>
         <Col
@@ -116,13 +116,15 @@ const Contact = () => {
           sm={{ span: 24 }}
           lg={{ span: 24 }}
         >
-          <h1>GET IN TOUCH WITH US</h1>
+          <h1>
+              <span className="black-text-contact">Get In Touch</span> With Us
+            </h1>
         </Col>
-        <Col xs={{ span: 22 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
+        <Col xs={{ span: 22 }} sm={{ span: 0 }} lg={{ span: 4 }}></Col>
         <Col
           className="Contact_Cards revealElement"
           xs={{ span: 22 }}
-          sm={{ span: 8 }}
+          sm={{ span: 12 }}
           lg={{ span: 8 }}
         >
           <Card
@@ -131,7 +133,7 @@ const Contact = () => {
             cover={
               <img
                 alt="example"
-                src={service1}
+                src={getintouch}
                 style={{ borderRadius: "20px" }}
               />
             }
@@ -151,13 +153,13 @@ const Contact = () => {
               </a>,
             ]}
           >
-            <Meta title="QUICK CONTACT" />
+            <h2 className="contact_h2">Quick Contact</h2>
           </Card>
         </Col>
         <Col
           className="Contact_Cards revealElement"
           xs={{ span: 22 }}
-          sm={{ span: 8 }}
+          sm={{ span: 12 }}
           lg={{ span: 8 }}
         >
           <Card
@@ -171,19 +173,11 @@ const Contact = () => {
               />
             }
           >
-            <Meta
-              title="CUSTOMER SERVICES"
-              description={
-                <>
-                  <div>
-                    <h5>Reliable and very fast service within 24 hours.</h5>
-                  </div>
-                </>
-              }
-            />
+            <h2 className="contact_h2">Customer Service</h2>
+            <h4 className="contact_h4">Reliable and very fast service within 24 hours.</h4>
           </Card>
         </Col>
-        <Col xs={{ span: 22 }} sm={{ span: 4 }} lg={{ span: 4 }}></Col>
+        <Col xs={{ span: 22 }} sm={{ span: 0 }} lg={{ span: 4 }}></Col>
 
         <Col xs={{ span: 22 }} sm={{ span: 2 }} lg={{ span: 4 }}></Col>
         <Col
@@ -192,7 +186,7 @@ const Contact = () => {
           sm={{ span: 20 }}
           lg={{ span: 6 }}
         >
-          <h1>CONTACT US</h1>
+          <h1>Contact Us</h1>
           <p>
             SSK Water Filter Technology is always here to assist with your
             queries and solve your problems. Contact us through this short form,
@@ -208,7 +202,7 @@ const Contact = () => {
           lg={{ span: 12 }}
         >
           <form ref={formRef} onSubmit={handleSubmit} className="contact-form revealElement">
-            <div className="form-field revealElement">
+            <div className="form-field ">
               <label htmlFor="name">Your Name</label>
               <input
                 type="text"
@@ -219,7 +213,7 @@ const Contact = () => {
                 placeholder="What's your good name?"
               />
             </div>
-            <div className="form-field revealElement">
+            <div className="form-field ">
               <label htmlFor="email">Your Email</label>
               <input
                 type="email"
@@ -230,7 +224,7 @@ const Contact = () => {
                 placeholder="What's your web address?"
               />
             </div>
-            <div className="form-field revealElement">
+            <div className="form-field ">
               <label htmlFor="message">Your Message</label>
               <textarea
                 id="message"
