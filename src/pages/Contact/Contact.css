@@ -1,36 +1,105 @@
-.contact-page {
-  position: relative;
+.banner-container img {
+  width: 100%;
+  height: auto;
 }
 
-.contact-header {
-  background-image: url(../../assests/images/contactus-banner.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 400px;
-  padding: 0 1rem;
-  position: relative;
+.banner-container h1 {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
   z-index: 1;
+  color: #fff;
 }
-.card_main1{
-  width: '100%';
-  height: 450px;
+
+.GetIn_Touch h1 {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 35px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: black;
+}
+.black-text-contact {
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: inline;
+  color: #1354a4;
+}
+
+.Contact_Cards {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: -10px;
+}
+
+.card_main1 {
+  width: "100%";
+  height: 460px;
   border-radius: 20px;
- 
 }
-.card_main2{
-  width: '100%';
-  height: 450px;
+.card_main2 {
+  width: "100%";
+  height: 460px;
   border-radius: 20px;
- 
 }
-.Contact_main{
+.Contact_main {
   margin-top: 100px;
 }
 
+.contact_h2 {
+  font-family: "Poppins", sans-serif;
+  text-align: start;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: black;
+}
+.contact_h4 {
+  font-family: "Poppins", sans-serif;
+  text-align: start;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: black;
+}
+
+.contsct_para h1 {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #1354a4;
+}
+.contsct_para {
+  margin: auto;
+}
+.contsct_para p {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #000000;
+}
+
+.centered {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .form-field {
   display: flex;
@@ -41,6 +110,7 @@
 label {
   font-weight: bold;
   margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 input,
@@ -61,13 +131,13 @@ button {
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
+  margin-bottom: 100px;
 }
 
 .error-message {
   color: red;
   margin-bottom: 10px;
 }
-
 
 .contact-header h1:first-child {
   font-size: 50px;
@@ -104,7 +174,6 @@ button {
   padding: 20px;
 }
 
-
 .contact-form .form-field {
   margin-bottom: 15px;
 }
@@ -132,6 +201,7 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .contact-form button:hover {
@@ -142,7 +212,6 @@ button {
   color: red;
   margin-bottom: 10px;
 }
-
 
 /* Get In touch */
 
@@ -174,7 +243,6 @@ button {
 
 .contact-form {
   display: flex;
-  flex-direction: column;
   align-items: center;
   max-width: 400px;
   margin: 0 auto;
@@ -185,7 +253,8 @@ button {
   backdrop-filter: blur(10px);
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  margin-left: 80px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .form-field {
@@ -219,7 +288,7 @@ button {
   margin-top: 10px;
 }
 
-button[type='submit'] {
+button[type="submit"] {
   background-color: #337ab7;
   color: white;
   border: none;
@@ -230,21 +299,94 @@ button[type='submit'] {
   cursor: pointer;
 }
 
-button[type='submit']:hover {
-  background-color: #23527c;
-}
 
 /* Media queries for mobile responsiveness */
-@media (max-width: 768px) {
+@media screen and (max-width: 1000px) {
+  .card_main1 {
+    width: "100%";
+    height: 400px;
+    margin-bottom: 40px;
+  }
+
+  .card_main2 {
+    width: "100%";
+    height: 400px;
+    margin-bottom: -30px;
+  }
+
+  .contsct_para h1 {
+    margin-top: 80px;
+    text-align: center;
+    margin-left: -100px;
+  }
+
+  .contsct_para p {
+    margin-left: -60px;
+    font-size: 20px;
+  }
+  .contact-form {
+    max-width: 600px;
+  }
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .form-field label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  .form-field input,
+  .form-field textarea {
+    width: 550px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+
+  .form-field textarea {
+    height: 150px; /* Adjust the height as desired */
+  }
+}
+
+@media screen and (max-width: 768px) {
   .contact-details {
     padding: 20px;
   }
-
-  .contact-form{
-    margin-left: 0px;
+  .Contact_us h1 {
+    margin-top: 40px;
+  }
+  .GetIn_Touch h1 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+  }
+  .banner-container img {
+    width: 100%;
+    height: auto;
   }
 
-  .contact_sinhala p{
+  .banner-container h1 {
+    font-size: 20px;
+  }
+
+  .centered {
+    margin-bottom: 50px;
+  }
+
+  .contact-form {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact_sinhala p {
     font-size: 14px;
   }
 
@@ -254,13 +396,11 @@ button[type='submit']:hover {
     align-items: flex-start;
     margin-bottom: 20px;
   }
-  
+
   .form-field label {
-    
     font-size: 10px;
-    
   }
-  
+
   .form-field input,
   .form-field textarea {
     width: 270px;
@@ -268,13 +408,12 @@ button[type='submit']:hover {
     border-radius: 10px;
     border: 1px solid #ccc;
   }
-  
+
   .form-field textarea {
     height: 150px; /* Adjust the height as desired */
   }
-  
 
-  .contact-details h1{
+  .contact-details h1 {
     font-size: 20px;
   }
 
@@ -299,50 +438,113 @@ button[type='submit']:hover {
     width: 100%;
   } */
 
-  button[type='submit'] {
-    width: 100%;
+  button[type="submit"] {
+    width: 80%;
   }
-
-  .contact-header {
-    background-image: url(../../assests/images/contactus-banner.jpg);
-    width: 500px;
-    margin-left: -100px;
-    height: 200px;
-    margin-top: -20px;
-  }
-
   .contact-header h1:first-child {
-   color: #ffffff;
-   font-size: 40px;
-   margin-left: 140px;
-   
+    color: #ffffff;
+    font-size: 40px;
+    margin-left: 140px;
   }
-  
+
   .contact-header h1:last-child {
     display: none;
   }
-  
-  .card_main1{
-    width: '100%';
-    height: 350px;
+
+  .card_main1 {
+    width: "100%";
+    height: 330px;
     margin-bottom: 40px;
   }
 
-  .card_main2{
-    width: '100%';
-    height: 350px;
+  .card_main2 {
+    width: "100%";
+    height: 300px;
     margin-bottom: -30px;
   }
 
-  .contact-email h1{
+  .contact-email h1 {
     text-align: center;
     font-size: 24px;
     padding: 20px;
   }
 
-  .contact-email p{
+  .contact-email p {
     font-size: 14px;
     text-align: justify;
   }
+}
 
+@media screen and (max-width: 576px) {
+  .card_main1 {
+    width: "80%";
+    height: auto;
+    margin-top: -30px;
+    margin-bottom: 40px;
+  }
+
+  .card_main2 {
+    width: "80%";
+    height: auto;
+    margin-bottom: -30px;
+  }
+
+  .GetIn_Touch h1 {
+    font-size: 20px;
+  }
+  .black-text-contact {
+    font-size: 20px;
+  }
+
+  .contact_h2 {
+    font-size: 14px;
+  }
+  .contact_h4 {
+    font-size: 14px;
+  }
+
+  .contsct_para h1 {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: 0px;
+  }
+  .contsct_para {
+    margin: auto;
+  }
+  .contsct_para p {
+    font-size: 12px;
+    line-height: 2;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 565px) {
+  .card_main1 {
+    width: "80%";
+    height: 350px;
+    margin-bottom: 0px;
+  }
+
+  .card_main2 {
+    width: "80%";
+    height: 340px;
+    margin-bottom: 20px;
+  }
+  .Contact_us h1 {
+    margin-top: 40px;
+  }
+
+  .contact-form {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+  .centered {
+    margin-bottom: 200px;
+  }
+  .banner-container img{
+    margin-top: 20px;
+  }
 }

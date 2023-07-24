@@ -1,113 +1,132 @@
-.single__course__item {
-  padding: 15px;
+.service_header {
+  margin-top: 200px;
+  /* background-color: rgb(27, 26, 26); */
+  background-image: url('./back.jpg');
+  padding-top: 60px;
+  backdrop-filter: blur(20px);
+  height: auto;
+  
 }
-
-.course__img img {
-  border-radius: 10px;
+.service_Header {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   margin-bottom: 20px;
 }
-.course__img img:hover {
-  transform: scale(1.1);
-  transition: all 0.3s ease-in-out;
-}
 
-.enroll a {
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: #17bf9e;
+.course-card img {
+  width: 100%;
+  height: auto;
 }
-
-.lesson,
-.students,
-.rating {
-  font-size: 0.9rem;
-  color: #0a2b1e;
-  font-weight: 500;
-}
-
-.lesson i,
-.students i,
-.rating i {
-  font-weight: 400;
-}
-
 .course__title {
-  line-height: 2rem;
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255);
+}
+.para {
+  margin-left: 100px;
+  color: white;
+}
+.para2 {
+  margin-left: 160px;
+  color: white;
 }
 
-.course__top__left h2 {
+.service_Header h1 {
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+  font-size: 35px;
   font-weight: 600;
-  font-size: 50px;
-  margin-top: 40px;
-  margin-left: 60px;
-}
-
-.course__top__left p {
-  margin-left: 60px;
-}
-
-.btn {
-  margin-right: 40px;
-}
-.ri-book-open-line , .ri-star-fill{
-  margin-left: 10px;
-}
-
-.students , .enroll {
-  margin-right: 40px;
-}
-
-.our_filters h2{
-  text-align: center; /* Align the heading at the center */
-  font-family: "Helvetica Neue", Arial, sans-serif; /* Apply a font style */
-  font-size: 40px; /* Set the font size */
-  font-weight: bold; /* Set the font weight */
-  margin-left: 440px;
-  width: 400px;
+  letter-spacing: 2px;
+  color: rgb(255, 255, 255);
   margin-top: 0px;
 }
-
-@media screen and (max-width: 960px) {
-  .course__top h2 {
-    font-size: 30px;
-    margin-top: -50px;
-  } 
+.service_Header p {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: rgb(255, 255, 255);
 }
 
-@media (max-width: 768px) {
-  .course__top h2 {
-    font-size: 30px;
-    margin-top: -50px;
-    margin-left: 100px;
 
-    margin-bottom: -50px;
-  } 
-  .course__img {
-    width: 300px;
-    margin-left: 10px;
+.cards_col_3 {
+  margin-bottom: -10px;
+  color:  rgb(224, 217, 217);
+}
+
+.Our_filters {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+}
+.Cards_image {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.price p {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-left: 55px;
+  color: rgb(255, 255, 255);
+}
+
+@media (max-width: 576px) {
+  .service_header {
+    margin-top: 100px;
+    padding-top: 100px;
   }
-  
-  .course__top {
-    width: 400px;
+  .Our_filters {
+    margin-bottom: 0px;
   }
   .course__title {
     font-size: 12px;
+   
   }
-  .students , .rating ,.enroll ,.lesson{
+  .service_Header h1 {
+    font-size: 25px;
+    margin-top: -60px;
+  }
+  .price p {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
     font-size: 12px;
-    margin-top: -30px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: rgb(255, 255, 255);
+    margin-left: 25px;
   }
-
-
-  .our_filters h2{
-    text-align: center; /* Align the heading at the center */
-    font-family: "Helvetica Neue", Arial, sans-serif; /* Apply a font style */
-    font-size: 30px; /* Set the font size */
-    font-weight: bold; /* Set the font weight */
-    margin-left: -50px;
-    width: 400px;
-    margin-top: -50px;
+  .service_Header p {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: rgb(255, 255, 255);
   }
-  
+  .course-card img {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 20px;
+    height: auto;
+  }
+  .para {
+    margin-left: 40px;
+  }
+  .para2 {
+    margin-left: 100px;
+  }
+  .course__details {
+    margin-bottom: 20px;
+  }
 }

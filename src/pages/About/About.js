@@ -1,85 +1,316 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+import { Col, Row } from "antd";
+import ScrollReveal from "scrollreveal";
+
 import "./about.css";
-import { Container, Row, Col } from "reactstrap";
-import aboutImg from "../../assests/images/logo3.png";
-import CountUp from "react-countup";
-import "./about.css";
+
+import logo from "../../assests/images/about/gif.gif";
+import vision from "../../assests/images/about/vision2.png";
+import mission from "../../assests/images/about/mission.png";
+import trusted from "../../assests/images/about/trusted.png";
+import acolabarateout from "../../assests/images/about/colabarate.png";
+import responce from "../../assests/images/about/responce.png";
+import prograsive from "../../assests/images/about/prograsive.png";
+
+import Affordable from "../../assests/images/about/aff.gif";
+import HighestQuality from "../../assests/images/about/quality.gif";
+import delivery from "../../assests/images/about/delevary.gif";
+import smart from "../../assests/images/about/smart.gif";
+
+import martin from "../../assests/images/about/company/1.png";
+import vontron from "../../assests/images/about/company/2.png";
+import cruze from "../../assests/images/about/company/3.png";
+import aqua from "../../assests/images/about/company/4.png";
+
 import Footer from "../../components/Footer/Footer";
 
 const About = () => {
+  useEffect(() => {
+    const sr = ScrollReveal();
+
+    sr.reveal(".revealElement", {
+      duration: 2000,
+      distance: "50px",
+      easing: "ease",
+      origin: "bottom",
+    });
+  }, []);
+
   return (
-    <section>
-      <Container>
-        <Row>
-        
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.307539947541!2d80.3361678749926!3d8.17173980181844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afcefc8b6f2e8f9%3A0x960b61f4ad847d81!2sSSK%20Water%20Filter%20Technology!5e0!3m2!1sen!2slk!4v1683954770123!5m2!1sen!2slk" 
-          width="100vh" 
-          height="450" 
-          style={{ border:"0"}} 
-          allowfullscreen="" 
-          loading="lazy" 
-          title="Google Map of SSK Water Filter Technology">
-        </iframe>
+    <>
+      <Row className="about_Top_background revealElement">
+        <Col
+          className="about_Top"
+          xs={{ span: 20 }}
+          sm={{ span: 20 }}
+          lg={{ span: 24 }}
+        >
+          <h2>
+            <span className="black-text5 revealElement">SSK</span> Water Filters
+          </h2>
+          <p>
+            SSK Water Filters Pvt Ltd is a start-up that specializes in advanced
+            water filtration solutions.
+          </p>
+        </Col>
+      </Row>
 
-
-          <Col lg="5" md="10">
-            <div className="about__img">
-              <img src={aboutImg} alt="" className="w-100" />
-            </div>
-          </Col>
-
-          <Col lg="6" md="6">
-            <div className="about__content">
-              <h2>About Us</h2>
+      <Row>
+        <div className="blog_container_about revealElement">
+          <Row className="Main_Blog">
+            <Col
+              className="about_header"
+              xs={{ span: 22 }}
+              sm={{ span: 8 }}
+              lg={{ span: 8 }}
+            >
+              <img src={logo} alt="" />
+            </Col>
+            <Col
+              className="blog_header1"
+              xs={{ span: 22 }}
+              sm={{ span: 16 }}
+              lg={{ span: 16 }}
+            >
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Excepturi cupiditate animi deserunt libero nesciunt corporis
-                explicabo nobis ex quo molestiae!
+                SSK Water Filters Pvt Ltd is a start-up that specializes in
+                advanced water filtration solutions. Our mission is to provide
+                individuals, businesses, and organizations with cutting-edge
+                technology to purify and ensure access to clean, safe water. We
+                offer a range of innovative water filters and purification
+                systems designed to meet diverse needs and requirements. Whether
+                it's for residential use, commercial applications, or industrial
+                purposes, SSK Water Filters is committed to delivering reliable
+                and efficient water filtration solutions that enhance the
+                quality of life for our customers.
               </p>
+              <div className="button_container"></div>
+            </Col>
+          </Row>
+        </div>
+      </Row>
 
-              <div className="about__counter">
-                <div className=" d-flex gap-5 align-items-center">
-                  <div className="single__counter">
-                    <span className="counter">
-                      <CountUp start={0} end={120} duration={2} suffix="" />
-                    </span>
+      <Row>
+        <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 4 }}></Col>
+        <Col
+          className="vimi revealElement"
+          xs={{ span: 20 }}
+          sm={{ span: 20 }}
+          lg={{ span: 7 }}
+        >
+          <img src={vision} alt="" />
+          <h1>
+            <span className="black-text-vision">V</span>ISION
+          </h1>
+          <p>
+            Our vision is to be a Sri Lankan leader in providing advanced water
+            filtration solutions that contribute to a sustainable, water-secure
+            future. We strive to revolutionize how water is treated and
+            consumed,ensuring clean and safe water for all.
+          </p>
+        </Col>
+        <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 0 }}></Col>
+        <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 0 }}></Col>
 
-                    <p className="counter__title">Installed Filters</p>
-                  </div>
+        <Col
+          className="vimi revealElement"
+          xs={{ span: 20 }}
+          sm={{ span: 20 }}
+          lg={{ span: 7 }}
+        >
+          <img src={mission} alt="" />
+          <h1>
+            <span className="black-text-vision">M</span>ISSION
+          </h1>
+          <p>
+            our mission is to provide individuals, businesses, and organizations
+            with the highest quality water filtration solutions. We strive to
+            deliver exceptional products that ensure clean and safe water while
+            prioritizing efficiency and environmental sustainability.
+          </p>
+        </Col>
+        <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 4 }}></Col>
+      </Row>
 
-                  <div className="single__counter">
-                    <span className="counter">
-                      <CountUp start={0} end={100} duration={2} suffix="" />
-                    </span>
+      <div className="purpose_background revealElement">
+        <Row>
+          <Col
+            className="Philosophy"
+            xs={{ span: 24 }}
+            sm={{ span: 24 }}
+            lg={{ span: 24 }}
+          >
+            <h1>Purpose</h1>
+          </Col>
 
-                    <p className="counter__title">Repaired Filters</p>
-                  </div>
-                </div>
-
-                <div className=" d-flex gap-5 align-items-center">
-                  {/* <div className="single__counter">
-                    <span className="counter">
-                      <CountUp start={0} end={95} duration={2} suffix="M" />
-                    </span>
-
-                    <p className="counter__title"></p>
-                  </div> */}
-
-                  {/* <div className="single__counter">
-                    <span className="counter">
-                      <CountUp start={0} end={5} duration={2} suffix="K" />
-                    </span>
-
-                    <p className="counter__title">Categories Served</p>
-                  </div> */}
-                </div>
-              </div>
+          <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
+          <Col
+            className="purpose"
+            xs={{ span: 5 }}
+            sm={{ span: 5 }}
+            lg={{ span: 5 }}
+          >
+            <div className="image-container" style={{ textAlign: "center" }}>
+              <img className="" src={trusted} alt="" />
+              <h5>TRUSTED</h5>
             </div>
           </Col>
+          <Col
+            className="purpose"
+            xs={{ span: 5 }}
+            sm={{ span: 5 }}
+            lg={{ span: 5 }}
+          >
+            <div className="image-container" style={{ textAlign: "center" }}>
+              <img className="" src={acolabarateout} alt="" />
+              <h5>COLLABORATIVE</h5>
+            </div>
+          </Col>
+          <Col
+            className="purpose"
+            xs={{ span: 5 }}
+            sm={{ span: 5 }}
+            lg={{ span: 5 }}
+          >
+            <div className="image-container" style={{ textAlign: "center" }}>
+              <img className="" src={responce} alt="" />
+              <h5>RESPONSIBLE</h5>
+            </div>
+          </Col>
+          <Col
+            className="purpose"
+            xs={{ span: 5 }}
+            sm={{ span: 5 }}
+            lg={{ span: 5 }}
+          >
+            <div className="image-container" style={{ textAlign: "center" }}>
+              <img className="" src={prograsive} alt="" />
+              <h5>PROGRESSIVE</h5>
+            </div>
+          </Col>
+          <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
         </Row>
-      </Container>
-    </section>
+      </div>
+
+      <Row className="WhyChose">
+        <Col
+          className="ChooseUs revealElement"
+          xs={{ span: 24 }}
+          sm={{ span: 24 }}
+          lg={{ span: 24 }}
+        >
+          <h1>Why Chose Us</h1>
+        </Col>
+
+        <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
+        <Col
+          className="purpose revealElement"
+          xs={{ span: 4 }}
+          sm={{ span: 4 }}
+          lg={{ span: 4 }}
+        >
+          <div className="image-container" style={{ textAlign: "center" }}>
+            <img className="" src={Affordable} alt="" />
+            <h5>Affordabilty</h5>
+          </div>
+        </Col>
+        <Col
+          className="purpose revealElement"
+          xs={{ span: 4 }}
+          sm={{ span: 4 }}
+          lg={{ span: 4 }}
+        >
+          <div className="image-container" style={{ textAlign: "center" }}>
+            <img className="" src={HighestQuality} alt="" />
+            <h5>Highest quality</h5>
+          </div>
+        </Col>
+        <Col
+          className="purpose revealElement"
+          xs={{ span: 4 }}
+          sm={{ span: 4 }}
+          lg={{ span: 4 }}
+        >
+          <div className="image-container" style={{ textAlign: "center" }}>
+            <img className="" src={delivery} alt="" />
+            <h5>Island wide coverage</h5>
+          </div>
+        </Col>
+        <Col
+          className="purpose revealElement"
+          xs={{ span: 4 }}
+          sm={{ span: 4 }}
+          lg={{ span: 4 }}
+        >
+          <div className="image-container" style={{ textAlign: "center" }}>
+            <img className="" src={smart} alt="" />
+            <h5>Smart Solutions</h5>
+          </div>
+        </Col>
+        <Col xs={{ span: 2 }} sm={{ span: 2 }} lg={{ span: 2 }}></Col>
+      </Row>
+
+      <Row className="weAreCollabarate revealElement">
+        <Col
+          className="Philosophy1"
+          xs={{ span: 20 }}
+          sm={{ span: 20 }}
+          lg={{ span: 20 }}
+        >
+          <h1>We Are Collabarate With</h1>
+        </Col>
+      </Row>
+
+      <Row className="revealElement">
+        <Col
+          className=""
+          xs={{ span: 2 }}
+          sm={{ span: 2 }}
+          lg={{ span: 2 }}
+        ></Col>
+
+        <Col
+          className="companyImage"
+          xs={{ span: 5 }}
+          sm={{ span: 5 }}
+          lg={{ span: 5 }}
+        >
+          <img className="" src={martin} alt="" />
+        </Col>
+        <Col
+          className="companyImage"
+          xs={{ span: 5 }}
+          sm={{ span: 5 }}
+          lg={{ span: 5 }}
+        >
+          <img className="" src={vontron} alt="" />
+        </Col>
+        <Col
+          className="companyImage"
+          xs={{ span: 5 }}
+          sm={{ span: 5 }}
+          lg={{ span: 5 }}
+        >
+          <img className="" src={cruze} alt="" />
+        </Col>
+        <Col
+          className="companyImage"
+          xs={{ span: 5 }}
+          sm={{ span: 5 }}
+          lg={{ span: 5 }}
+        >
+          <img className="" src={aqua} alt="" />
+        </Col>
+        <Col
+          className="purpose1"
+          xs={{ span: 2 }}
+          sm={{ span: 2 }}
+          lg={{ span: 2 }}
+        ></Col>
+      </Row>
+      <Footer />
+    </>
   );
 };
 

@@ -1,15 +1,18 @@
-import React from "react";
-import { Container, Row, Col } from "reactstrap";
-import courseImg1 from "../../assests/images/Filter/home1.jpg";
-import courseImg2 from "../../assests/images/Filter/home2.jpg";
-import courseImg3 from "../../assests/images/Filter/industrial1.jpg";
+import React ,{useEffect} from "react";
+import ScrollReveal from "scrollreveal";
+
+import courseImg1 from "../../assests/images/Filter/home1.png";
+import courseImg2 from "../../assests/images/Filter/home2.png";
+import courseImg3 from "../../assests/images/Filter/home3.png";
 import "./courses.css";
 import CourseCard from "./CourseCard";
+import { Col, Row } from "antd";
 
 const coursesData = [
   {
-    id:1,
-    title: "World’s Best RO Water Purifiers Protect your Family with the Purest Drinking Water",
+    id: 1,
+    title:
+      "World’s Best RO Water Purifiers Protect your Family with the Purest",
     Price: 78000,
     customer: 132,
     rating: 98,
@@ -17,7 +20,7 @@ const coursesData = [
   },
 
   {
-    id:2,
+    id: 2,
     title: "Best Water Purifiers in Sri Lanka (2023) , High storage capacity ",
     Price: 80000,
     customer: 75,
@@ -26,8 +29,9 @@ const coursesData = [
   },
 
   {
-    id:3,
-    title: "Vikas Pollution is highly acclaimed in the industry for manufacturing",
+    id: 3,
+    title:
+      "Vikas Pollution is highly acclaimed in the industry for manufacturing",
     Price: 200000,
     customer: 40,
     rating: 38,
@@ -36,30 +40,43 @@ const coursesData = [
 ];
 
 function Services() {
+  useEffect(() => {
+    const sr = ScrollReveal();
+
+    sr.reveal(".revealElement", {
+      duration: 2000,
+      distance: "50px",
+      easing: "ease",
+      origin: "bottom",
+    });
+  }, []);
+
   return (
-    <section>
-      <Container>
-        <Row>
-          <Col lg="12" className="mb-5">
-            <div className="course__top d-flex flex-column flex-md-row justify-content-between align-items-center">
-              <div className="our_filters">
-                <h2>Our Filters</h2>
-              </div>
-              <div className="w-100 text-md-end mb-3 mb-md-0">
-              </div>
-              {/* <div className="w-100 text-md-end">
-              <button className="btn">See All</button>
-            </div> */}
-            </div>
+    <div className="service_header">
+      <Row >
+        <Col className="service_Header revealElement" xs={{ span: 20 }} lg={{ span: 24 }}>
+          <h1>What We Sell</h1>
+          <p>World’s Best RO Water Purifiers</p>
+          
+        </Col>
+      </Row>
+      <Row className="cards_col_3 revealElement" justify="center">
+        <Col lg={{ span: 2 }} xs={{ span: 20 }}></Col>
+        {coursesData.map((item) => (
+          <Col
+            className="Our_filters"
+            key={item.id}
+            xs={{ span: 16 }}
+            sm={{ span: 16 }}
+            md={{ span: 6 }}
+            lg={{ span: 6 }}
+          >
+            <CourseCard key={item.id} item={item} />
           </Col>
-          {coursesData.map((item) => (
-            <Col key={item.id} lg="4" md="6" sm="6">
-              <CourseCard key={item.id} item={item} />
-            </Col>
-          ))}
-        </Row>
-      </Container>
-    </section>
+        ))}
+        <Col lg={{ span: 2 }} xs={{ span: 20 }}></Col>
+      </Row>
+    </div>
   );
 }
 

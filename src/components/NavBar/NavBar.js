@@ -1,69 +1,78 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import { Link } from 'react-router-dom';
-import './NavBar.css';
-import logo from '../../assests/images/logo3.png';
+import { Link, useLocation } from "react-router-dom";
+import "./NavBar.css";
+import logo from "../../assests/images/about/gif.gif";
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  
-  
+  const location = useLocation();
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
+  const isActiveLink = (pathname) => {
+    return location.pathname === pathname ? "nav-links active" : "nav-links";
+  };
+
   return (
     <>
-      <div className='navbar'>
-        <div className='navbar-container'>
-          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-          <img src={logo} alt="Logo" />
-          <h6>SSK WATER FILTERS </h6> 
+      <div className="navbar">
+        <div className="navbar-container">
+          <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+            <img src={logo} alt="Logo" />
           </Link>
-          <div className='menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+          <div className="menu-icon" onClick={handleClick}>
+            <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
-          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-            <li className='nav-item'>
-              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                HOME
-              </Link>
-            </li>
-            <li className='nav-item'>
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item">
               <Link
-                to='/store'
-                className='nav-links'
+                to="/"
+                className={isActiveLink("/")}
                 onClick={closeMobileMenu}
               >
-                STORE
+                Home
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className="nav-item">
               <Link
-                to='/about'
-                className='nav-links'
+                to="/about"
+                className={isActiveLink("/about")}
                 onClick={closeMobileMenu}
               >
-                ABOUT
+                About Us
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className="nav-item">
               <Link
-                to='/blog'
-                className='nav-links'
+                to="/blog"
+                className={isActiveLink("/blog")}
                 onClick={closeMobileMenu}
               >
-                BLOG
+                Blog
               </Link>
             </li>
-            <li className='nav-item'>
+            <li className="nav-item">
               <Link
-                to='/contact'
-                className='nav-links'
+                to="/store"
+                className={isActiveLink("/store")}
                 onClick={closeMobileMenu}
               >
-                CONTACT
+                Store
               </Link>
+            </li>
+
+            <li className="nav-item">
+              <div className="contact-box">
+                <Link
+                  to="/contact"
+                  className="nav-links_contact"
+                  onClick={closeMobileMenu}
+                >
+                  Contact Now
+                </Link>
+              </div>
             </li>
           </ul>
         </div>
